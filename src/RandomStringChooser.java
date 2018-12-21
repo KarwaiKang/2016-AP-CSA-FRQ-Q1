@@ -1,17 +1,16 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class RandomStringChooser {
-    ArrayList<String> strArrList = new ArrayList<>();
+    ArrayList<String> strList = new ArrayList<>();
 
     public RandomStringChooser(String[] strArr) {
         for (String s : strArr)
-            strArrList.add(s);
+            strList.add(s);
     }
 
     public String getNext() {
-        if (strArrList.size() <= 0)
+        if (strList.size() == 0)
             return "NONE";
-        return strArrList.remove((int)(Math.random() * strArrList.size()));
+        return strList.remove((int) (Math.random() * strList.size()));
     }
 }
